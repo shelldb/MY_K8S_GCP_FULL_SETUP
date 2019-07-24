@@ -12,4 +12,4 @@ gcloud compute ssh jenkins -- 'sudo usermod -G google-sudoers `whoami`'
 gcloud compute ssh jenkins -- 'sudo mkdir `pwd`/setup_files'
 gcloud compute ssh jenkins -- 'sudo chmod 777 ~/setup_files'
 gcloud compute scp `pwd`/jenkins_install.sh jenkins:~/setup_files
-#gcloud compute ssh jenkins -- 'cd  ~/setup_files && sudo sh jenkins_install.sh'
+gcloud compute ssh jenkins -- 'cd  ~/setup_files && sudo sh jenkins_install.sh'

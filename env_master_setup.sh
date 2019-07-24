@@ -10,6 +10,7 @@ gcloud compute ssh $1 -- 'sudo chmod 777 ~/setup_files'
 gcloud compute scp `pwd`/k8s_installation.sh $1:~/setup_files
 gcloud compute scp `pwd`/k8_master_install.sh $1:~/setup_files
 gcloud compute scp `pwd`/helm.sh $1:~/setup_files
+gcloud compute scp `pwd`/guestbook.sh $1:~/setup_files
 gcloud compute ssh $1 -- 'cd  ~/setup_files && sudo sh k8s_installation.sh'
 gcloud compute ssh $1 -- 'cd  ~/setup_files && sudo sh k8_master_install.sh'
 gcloud compute ssh $1 -- 'cd  ~/setup_files && sudo sh helm.sh'
